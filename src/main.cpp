@@ -43,6 +43,7 @@ bool dispensingMed(int amount) {
     int count_med = 0;
     const int MedCountToClose = amount - 3; // กำหนดจำนวนยาสำหรับสั่งปิด servo ก่อนครบตามจำนวน
 
+    
     myServo.write(dispenseAngle); // หมุนเซอร์โวเพื่อเตรียมจ่ายยา
     while (count_med < amount) {
         Serial.println(count_med);
