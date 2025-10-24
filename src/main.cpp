@@ -127,7 +127,7 @@ void medicine_process(const String &medName){
 
 void loop() {
     display.clearDisplay();
-    displayMessage("Choose a medicine");
+    displayMessage("Please select medicine");
 
     char key = keypad.getKey();
     if (key == 'A')

@@ -27,9 +27,9 @@ A smart automatic medicine dispensing system project built using the **ESP32** m
 
 ## ⚙️ Workflow
 
-1.  **Initialization:** The system boots up. The OLED displays a welcome message or "Please select medicine."
+1.  **Initialization:** The system boots up. The OLED displays "Please select medicine."
 2.  **Select Medicine:** The user presses a button on the Keypad (e.g., 'A', 'B', 'C', 'D') to choose the medicine type.
-3.  **Enter Quantity:** The OLED prompts "Enter amount." The user enters a number (e.g., '5') and presses a confirmation key (e.g., '#').
+3.  **Enter Quantity:** The OLED prompts "Enter the amount." The user enters a number (e.g., '5') and presses a confirmation key (e.g., '#').
 4.  **Dispensing Starts:** The system commands the Servo Motor to rotate to the "open" position.
 5.  **Counting:** Pills begin to fall past the IR Sensor.
     * Each time a pill breaks the sensor's beam (e.g., state changes from `HIGH` to `LOW`), the system increments the count (`count + 1`).
