@@ -61,6 +61,3 @@ A smart automatic medicine dispensing system project built using the **ESP32** m
     * Upload the code to your board.
 
 ---
-
-## 📊 System Diagram
-+---------------+ +----------+ +---------------+ | | ---> | | ---> | | | Keypad 4x4 | | ESP32 | | OLED Display | | (Input) | | (Control)| | (Output) | | | <--- | | | | +---------------+ | | <--- +---------------+ ^ | | ^ | +----------+ | | | | +-------------------+------------------+ | (Detects Pill) | (Counts) v +---------------+ +----------+ | | | | | IR Sensor | | Servo | | | <--- | Motor | | | | (Action) | +---------------+ +----------+ ^ | (Controls Gate)
