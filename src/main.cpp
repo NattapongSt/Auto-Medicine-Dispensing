@@ -17,11 +17,11 @@ const int dispenseAngle = 90; // มุมที่ใช้ในการจ�
 const int restAngle = 0; // มุมพักของเซอร์โว
 const int timegapMed = 100; // เวลาหน่วงระหว่างเม็ดยา
 
-    char keys[ROW_NUM][COLUMN_NUM] = {
-        {'1', '2', '3', 'A'},
-        {'4', '5', '6', 'B'},
-        {'7', '8', '9', 'C'},
-        {'*', '0', '#', 'D'}};
+char keys[ROW_NUM][COLUMN_NUM] = {
+    {'1', '2', '3', 'A'},
+    {'4', '5', '6', 'B'},
+    {'7', '8', '9', 'C'},
+    {'*', '0', '#', 'D'}};
 
 byte pin_rows[ROW_NUM] = {13, 12, 14, 27};    
 byte pin_column[COLUMN_NUM] = {26, 25, 33, 32};
@@ -43,7 +43,7 @@ bool dispensingMed(int amount) {
     int count_med = 0;
     const int MedCountToClose = amount - 3; // กำหนดจำนวนยาสำหรับสั่งปิด servo ก่อนครบตามจำนวน
 
-    
+
     myServo.write(dispenseAngle); // หมุนเซอร์โวเพื่อเตรียมจ่ายยา
     while (count_med < amount) {
         Serial.println(count_med);
@@ -96,11 +96,6 @@ void medicine_process(const String &medName){
         {
             continue;
         }
-        else if (key == 'D')
-        {
-            amountStr = "";
-            continue;
-        }
         else if (key == '*')
         {
             amountStr = "";
@@ -117,7 +112,7 @@ void medicine_process(const String &medName){
     }
 }
 
-    void setup()
+void setup()
 {
     Serial.begin(115200);
 
